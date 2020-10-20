@@ -1,1 +1,341 @@
 /* Put your style information here! */
+
+/* encode-sans-expanded-regular - latin */
+@font-face {
+    font-family: 'Encode Sans Expanded';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Encode Sans Expanded Regular'), local('EncodeSansExpanded-Regular'),
+         url('./fonts/encode-sans-expanded-v5-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('./fonts/encode-sans-expanded-v5-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+body{
+    font-family: Century Gothic, sans-serif;
+    margin: 0px;
+}
+
+.big-title{
+    padding:2vw;
+    text-align:center;
+    padding-bottom: 2vw;
+}
+
+.introtowebsite{
+    padding: 5vw;
+    padding-top: 2vw;
+}
+
+.introtowebsite p{
+    text-align: center;
+}
+
+.introtowebsite img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+    height:auto;
+    align-content: center;
+}
+
+.lofi img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:auto;
+    align-content: center;
+}
+
+.hifi img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:auto;
+    align-content: center;
+}
+
+.usetext{
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.designcriteria{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15vw 15vw 15vw;
+    grid-gap: 1vw;
+}
+
+.usability{
+    grid-row: 1;
+    grid-column: 1;
+    font-size: small;
+    overflow:scroll;
+}
+
+.learnability{
+    grid-row: 1;
+    grid-column: 2;
+    font-size: small;
+    overflow:scroll;
+}
+
+.memorability{
+    grid-row: 2;
+    grid-column: 1;
+    font-size: small;
+    overflow:scroll;
+}
+
+.accessibility{
+    grid-row: 2;
+    grid-column: 2;
+    font-size: small;
+    overflow:scroll;
+}
+
+.judgement{
+    grid-row: 3;
+    grid-column: 1/3;
+    font-size: small;
+    overflow:scroll;
+}
+
+.designcriteria h4{
+    text-align: center;
+}
+
+.lofi{
+    padding: 5vw;
+    padding-bottom: 2vw;
+}
+.lofi p{
+    background-color: blanchedalmond;
+}
+
+.hifi{
+    padding: 5vw;
+    padding-bottom: 2vw;
+}
+
+.hifi p{
+    background-color: blanchedalmond;
+}
+
+.styleguide{
+    padding: 5vw;
+    padding-bottom: 2vw;
+}
+
+.styleguide h5{
+    font-family: 'Encode Sans Expanded', cursive;
+}
+
+.styleguide ul{
+    text-decoration: none;
+    list-style: none;
+}
+
+.styleguide li{
+    margin-bottom: 1vw;
+}
+
+.showing-style{
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#bluecircle{
+    background-color: #1b7098;
+}
+
+#orangecircle{
+    background-color: #fcc686;
+}
+
+#blackcircle{
+    background-color: black;
+}
+
+#whitecircle{
+    background-color: white;
+    border-style: solid;
+}
+
+#logocolorcircle{
+    background-color: #4FB1E0;
+}
+
+.encodesans{
+    font-family: 'Encode Sans Expanded', cursive; 
+}
+
+.explain{
+    margin: 2vw;
+    vertical-align: middle;
+}
+
+.linkedonblue{
+    background-color: #1b7098;
+}
+.linkedonblue a{
+    color:white;
+}
+.linkedonblue a:hover{
+    color: #fee8cd;
+}
+
+.linkedonorange{
+    background-color: #fcc686;
+}
+.linkedonorange a{
+    color:black;
+}
+.linkedonorange a:hover{
+    color: #1b7098;
+}
+
+.subnavbtn{
+    background-color: #1b7098;
+    color: white;
+    border:none;
+    outline:none;
+    padding: 1.2vw 1.2vw;
+    font-size: 1.25vw;
+    font-family: inherit;
+    margin-bottom: 2vw;
+}
+
+.subnavbtn:hover{
+    background-color: black;
+}
+
+.subnav-a{
+    background-color: #FCC686;
+    color:black;
+    font-size: 1.25vw;
+    padding: 1.2vw 1.2vw;
+    text-decoration: none;
+    margin-bottom: 2vw;
+}
+
+.subnav-a:hover{
+    background-color: black;
+    color: white;
+}
+
+.membershiplogin{
+    margin: 0 auto;
+    display: inline-block;
+    background-color: #FCC686;
+    border:none;
+    outline:none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+.membershiplogin:hover{
+    background-color:black;
+    color: white;
+}
+
+.membershiplogin a{
+    padding-left: 2vw;
+    padding-right:2vw;
+    font-size: 1.25vw;
+}
+
+.quicknavbutton{
+    font-size: 1.5vw;
+    background-color: #1b7098;
+    color: white;
+    border:none;
+    outline:none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 20vw;
+    height:10vw;
+    vertical-align: middle;
+    margin-bottom: 2vw;
+}
+
+.quicknavbutton a{
+    padding: 2vw;
+}
+
+.quicknavbutton:hover{
+    background-color: #fcc686;
+    color: black;
+}
+
+.menubutton{
+    color: white;
+    height:auto;
+    width:100%;
+    z-index: 1;
+    font-size: large;
+}
+
+.sidebar-show-wrap{
+    background-color: #1b7098;
+    color: white;
+}
+
+.sidebar-show-wrap p{
+    margin-left: 7vw;
+    margin-bottom: 2vw;
+}
+
+.searchstuff input{
+    margin: 5px;
+}
+
+.searchstuff button{
+    margin: 0 auto;
+    display: inline-block;
+    background-color: #FCC686;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+}
+
+.searchstuff button:hover{
+    background-color: white;
+}
+
+.search{
+    font-size: 1vw;
+    height: 3vw;
+}
+
+.websitebuild{
+    padding: 5vw;
+    padding-bottom: 2vw;
+}
+
+.access{
+    text-align: center;
+    padding: 0.5vw;
+}
+
+.access a{
+    color: #1b7098;
+}
+
+
+
+
+

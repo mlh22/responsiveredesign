@@ -1,14 +1,336 @@
 <!doctype html>
 
-<html>
+<html lang="en">
   <head>
-    <title>INSERT TITLE HERE!</title>
+    <meta charset="utf-8">
+    <title>Responsive Redesign</title>
+    <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="index.css">
-    <!-- TODO: add additional links here! e.g. fonts, icons, more stylesheets, etc. -->
     <meta content="width=device-width, initial-scale=1" name="viewport" />
   </head>
 
-  <body>
-    <!-- TODO: put your HTML code here! -->
+  <body onload="SetDefaultValue()">
+    <script>
+      function SetDefaultValue(){
+        var menu = document.getElementById("sidemenu");
+        menu.style.display = "none";
+      }
+    </script>
+    <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Responsive Redesign</a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="#intro">Intro</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#designcrit">Design Criteria</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#lofi">Lo-Fi</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#hifi">Hi-Fi</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#styleguide">Style Guide</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#websitebuild">Website Creation</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <h1 class="big-title display-2">Responsive Redesign: AFM Local 47</h1>
+    <hr>
+
+    <div class="introtowebsite" id="intro">
+      <h3 class="display-4">AFM Local 47: The Original Website</h3>
+      <br>
+      <p>In my search for websites with poor design, I came across a website
+        for a musicians union in Los Angeles. The first thought in my head was
+        "I can't figure out the name of this organization." The next was "I
+        don't really know what I should be clicking." And the third was "This 
+        website looks like it might download a virus to my computer." No offense 
+        to the original designers.
+      </p>
+      <img class="img-fluid" src="images/ogwebsite1.png" alt="screenshot of original website, one of three">
+      <img class="img-fluid" src="images/ogwebsite2.png" alt="screenshot of original website, two of three">
+      <img class="img-fluid" src="images/ogwebsite3.png" alt="screenshot of original website, three of three">
+      <p>The original site can be accessed <a href="https://afm47.org/">here</a>.</p>
+
+    </div>
+
+    <div class="usetext">
+      <h3 class="display-4">Design Criteria</h3>
+      <p>In analyzing the design of an interface, we fall back into three main categories:
+        usability, learnability, and memorability. Additionally, we want to look at the 
+        accessibility of this website.
+      </p>
+    </div>
+
+    <div class="designcriteria" id="designcrit">
+      <div class="usability">
+        <h4>Usability</h4>
+        <ul>
+          <li>Flat buttons, unsure of how to interact with them</li>
+          <li>Immediate bombardment with information makes it hard to know where to go first</li>
+          <li>One of the images in the grid doesn't change color on hover even though it is a button</li>
+          <li>Social media icons and log in buttons are hard to find</li>
+          <li>Locations for some items are in very unintuitive places on the site</li>
+        </ul>
+      </div>
+
+      <div class="learnability">
+        <h4>Learnability</h4>
+        <ul>
+          <li>Everything is sorted into fitting categories</li>
+          <li>More link bombardment - a few categories in the navigation bar have way too many subcategories</li>
+          <li>Easy to forget that pictures in the big grid have their own links too</li>
+          <li>Member resources category is LOADED</li>
+          <li>Navigating back to the home page is somewhat unclear</li>
+        </ul>
+      </div>
+
+      <div class="memorability">
+        <h4>Memorability</h4>
+        <ul>
+          <li>Text hierarchies make it unclear what the name of the company is until you go to the About Us page</li>
+          <li>Homepage looks very much like a spam website due to less spacing and a ton of links </li>
+          <li>The appearance is very similar to a blog website as opposed to a music and employment union website</li>
+        </ul>
+      </div>
+
+      <div class="accessibility">
+        <h4>Accessibility</h4>
+        <ul>
+          <li>WAVE tool detects many contrast issues with text color against background</li>
+          <li>Some of the images do not have alt text</li>
+          <li>Some of the buttons are made of images, and they don't have alt-text, so knowing the function of the button could be difficult</li>
+          <li>Screen readers have a hard time being able to read the buttons on the website</li>
+        </ul>
+      </div>
+    
+
+      <div class="judgement">
+        <h4>Overall Judgement of Original Website</h4>
+        <p>The website has a consistent color theme and responsive content, suggesting that some thought 
+          was certainly put into the aesthetic appearance of the website. However, it is not enough from a 
+          functional standpoint. Visitors to this website will be bombarded with a million links, with none 
+          looking tempting enough to click and all of the units together resembling more of a spam-type website 
+          than an organization. The navigation and interactions at some part of this website are very odd. 
+          Additionally, there is very minimal effort put into accessibility, with color contrast being a key issue, 
+          as well as important buttons being made from images and not having alt text. Overall, it is a decent 
+          website that I wouldn’t hate using if I was a member of the musicians’ union, but does not draw new 
+          visitors in and is not very engaging even for returning users. The design of the website is very plain 
+          and flat, and in my redesign I want to aim to make this website a lot cleaner, more accessible, and more 
+          interactive-feeling.</p>
+      </div>
+    </div>
+
+    <div class="lofi" id="lofi">
+      <h3 class="display-4">Lo-fi Markups</h3>
+      <div class="row">
+        <div class="col">
+          <img class="img-fluid" src="images/web-lofi-anno.png" alt="annotated lo-fi prototype of the website on browser">
+        </div>
+        <div class="col align-self-center">
+          <p>To create my markups, I used Balsamiq to layout all of my elements and get an idea of 
+            how I wanted things to be placed on the website. The idea with this layout is that spacing
+            allows for the existence of hierarchy and easier navigation on the website.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="w-100"></div>
+        <div class="col align-self-center">
+          <p>The biggest challenge in responsive redesign is having to think about how my layouts will 
+            work for different devices. Across screen sizes, the appearance of my site may vary as a 
+            result of ratioed sizing and limited space. As a result, I had to put in a lot of time 
+            considering how the size of the viewing screen would impact the way this layout would work.
+          </p>
+        </div>
+        <div class="col">
+          <img class="img-fluid" src="images/tablet-lofi-anno.png" alt="annotated lo-fi prototype of the website on tablet">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img class="img-fluid" src="images/phone-lofi-anno.png" alt="annotated lo-fi prototype of the website on mobile">
+        </div>
+        <div class="col align-self-center">
+          <p>The most fundamental changes, from what was planned in the lo-fi stage, would occur at 
+            two main places: the navigation bar and the quick navigation buttons. Navigation bars will be
+            hard to tap on and see on a smaller screen, so at a mobile screen size, I want to switch over 
+            from a navigation bar that stretches across the width of the screen into a hamburger menu that 
+            can be tapped on by a user to reveal the menu. As for the quick navigation, the biggest thing here 
+            will be to figure out how to wrap my buttons in a logical way.
+          </p>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="hifi" id="hifi">
+      <h3 class="display-4">Hi-fi Prototypes</h3>
+      <h6>Link to the actual Figma prototype can be found <a href="https://www.figma.com/file/urd8FiTAeXbRf0lpf9a85L/redesign-project-prototypes?node-id=0%3A1">here</a>.</h6>
+      <div class="row">
+        <div class="col align-self-center">
+          <p>The color scheme displayed on these screens comes partly from the main blue on the logo of the 
+            site, as well as the warm-tone of the "Pay Dues" button on the original website. I chose a more 
+            rounded font, rounded button style, and these light colors to add an element of brightness to the 
+            site, making it more engaging for users.
+          </p>
+        </div>
+        <div class="col">
+          <img class="img-fluid" src="images/web-hifi-anno.png" alt="annotated figma hi-fi prototype of website on browser">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img class="img-fluid" src="images/tablet-hifi-anno.png" alt="annotated figma hi-fi prototype of website on tablet">
+        </div>
+        <div class="col align-self-center">
+          <p>In order to make the website appear less flat than before, I decided to have shadows and hover 
+            actions on each button as a signal to the user to click. Keeping the city theme of the website in 
+            mind, I also went with a header photo of LA but in the daytime to keep with the theme of the new 
+            colors and to keep a theme of modernity.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col align-self-center">
+          <p>In creating hi-fi prototypes, I recognized that wrapping each section in a div container was 
+            the best way to go about keeping a clean, sleek design and create an obvious hierarchy. I decided 
+            that I would make use of grid layouts in my design, because they will keep the layout of my buttons 
+            very organized. While these prototypes depict only one part of my design, the major ideas were all 
+            laid out in front of me, ready to be coded.
+          </p>
+        </div>
+        <div class="col">
+          <img class="img-fluid" src="images/phone-hifi-anno.png" alt="annotated figma hi-fi prototype of website on browser">
+        </div>
+      </div>
+    </div>
+
+    <div class="styleguide" id="styleguide">
+      <h3 class="display-4">Style Guide</h3>
+      <br>
+      <div class="row">
+        <div class="col">
+          <h5>Colors</h5>
+            <ul>
+              <li><div class="showing-style" id="bluecircle"></div><span class="explain encodesans">Feature color</span></li>
+              <li><div class="showing-style" id="orangecircle"></div><span class="explain encodesans">Feature color</span></li>
+              <li><div class="showing-style" id="blackcircle"></div><span class="explain encodesans">Font and Hover</span></li>
+              <li><div class="showing-style" id="whitecircle"></div><span class="explain encodesans">Font and Hover</span></li>
+              <li><div class="showing-style" id="logocolorcircle"></div><span class="explain encodesans">Main Logo color</span></li>
+              <br>
+              <li>
+                <div class="searchstuff">
+                  <input type="text" placeholder="Dummy search">
+                  <button class="search">SEARCH</button>
+                  <p>Placeholder search interaction on page.</p>
+                </div></li>
+            </ul>
+        </div>
+        <div class="col">
+          <h5>Fonts</h5>
+            <h1 class="encodesans display-2" style="color: black;">Title</h1>
+            <h3 class="encodesans" style="color: #837c7c;">Sub-title</h3>
+            <h3 class="encodesans" style="color: black;">Heading</h3>
+            <h4 class="encodesans" style="font-size: 2vw;">Sub-heading</h4>
+            <p>Body text: This font is called 'Encode Sans Expanded'. It is a Google font I downloaded and imported for
+              this project. Sticking to the theme of making the site less flat, I wanted a rounded font to complement the rounded 
+              elements onscreen. </p>
+            <div class="linkedonblue"><a href="#" onclick="return false;">Linked text over blue, hover over me!</a></div>
+            <div class="linkedonorange"><a href="#" onclick="return false;">Linked text over orange, hover over me!</a></div>
+        </div>
+        <div class="col">
+          <h5>Buttons</h5>
+            <ul>
+              <li><a class="encodesans"><button class="subnavbtn">Browser L1 navbar</button></a></li>
+              <li><a class="subnav-a encodesans">Browser L2 navbar</a></li>
+              <li><a><button class="membershiplogin encodesans">Member Interactions</button></a></li>
+              <li><a><button class="quicknavbutton encodesans">Quick Navigation</button></a></li>
+              <li><div class="sidebar-show-wrap">
+                <a onclick="showhideToggle()" class="btn dropdown-toggle menubutton encodesans">Phone Menu dropdown</a>
+                  <div id="sidemenu">
+                    <p>Filler text</p>
+                  </div>
+              </div></li>
+              <p>Other "buttons" were images that filtered on hover, navigating off-site or to home.</p>
+            </ul>
+        </div>
+      </div>
+
+    </div>
+    <script>
+      function showhideToggle() {
+        var x = document.getElementById("sidemenu");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        }  
+        else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+
+    <div class="websitebuild" id="websitebuild">
+      <h3 class="display-4">Finished Website</h3>
+      <h4>Finished Product</h4>
+        <div class="screenshots">
+          <div class="row">
+            <div class="col">
+              <img class="img-fluid" src="images/website-ssone.png" alt="screenshot of website on browser, part one of two">
+            </div>
+            <div class="col">
+              <img class="img-fluid" src="images/website-sstwo.png" alt="screenshot of website on browser, part two of two">
+            </div>
+          </div>
+        </div>
+        <p class="access"> Website can be accessed <a href="https://afm47-redesign.herokuapp.com/">here</a>.</p>
+      <br>
+      <div class="row">
+        <div class="col">
+          <h4>Changes from Prototypes</h4>
+            <ul>
+              <li>The implementation of the hamburger menu bar, with the way I wanted it, required a lot of javascript I was 
+                uncomfortable with. While I did try to push as far as I could with new things to learn in this project, I ended 
+                up prioritizing my time with accessibility and visibility concerns instead.
+              </li>
+              <li>In my prototypes, I used a light blue background color that matched that of the logo, along with white text. 
+                However, the contrast between these colors was too low, so I darkened the background color.
+              </li>
+              <li>I borrowed a little from the original website and extended on my original design by adding the grid-format 
+                orange column panels just before the footer. Thnking about the company itself, I came to the conclusion that 
+                they would want to encourage donating and giving money to offer support, since they are a labor union. I kept the 
+                idea of the columns but added my own tweaks to make them more engaging and responsive.
+              </li>
+            </ul>
+        </div>
+        <div class="col">
+          <h4>Overall Changes from Original</h4>
+            <ul>
+              <li>Buttons with box shadows and hover colors to encourage interactiveness</li>
+              <li>Menu bar looks different on tablet/phone than on browser, for ease of use.</li>
+              <li>Website search higher on the page for direct navigation</li>
+              <li>Better hierarchy of items to make purpose and structure clear</li>
+              <li>Changed picture and theme colors to have a more coherent theme</li>
+              <li>More cleaned-up, minimalistic design</li>
+              <li>Better color contrast on page</li>
+              <li>Responsive fonts, boxes, icons, buttons, etc</li>
+            </ul>
+        </div>
+        <div class="col">
+          <h4>Self-Evaluation</h4>
+            <ul>
+              <li>According to WAVE, the single error on this site was the dummy search and lack of any link to other sites, 
+                but this was intentional for the purposes of the assignment.</li>
+              <li>The only other issues WAVE pointed out was to external links leading to original website.</li>
+              <li>There are many things I wasn't fully conscious of when I was designing, leading me to redoing multiple aspects
+                of the site mainly for accessiblity concerns - this seems like some sort of internal bias we as designers need to
+                learn to hone in on better.</li>
+              <li>Prototyping was extremely, EXTREMELY helpful, as I was able to save time by coding the things I knew was 
+                going to be on the page, so I could spend more of my time on debugging.</li>
+              <li>I also became more conscious of design on the user end as well - thinking about it, I went with such a rounded
+                look for my redesign because it felt more interactive, which I believe several other companies in the tech industry 
+                have done with their own product redesigns as well.</li>
+            </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
